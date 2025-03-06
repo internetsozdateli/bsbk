@@ -1,0 +1,51 @@
+// ===================================
+// hero-section
+// ===================================
+.hero-section {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5.38rem;
+    padding: 16.69rem 8.69rem 7rem 4.06rem;
+  }
+  &__title {
+    max-width: 47.5rem;
+    margin-left: auto;
+    color: #FFF;
+    font-size: 6.125rem;
+    font-weight: 700;
+    line-height: 108%;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    &__container {
+      gap: 11.06rem;
+      padding: 22.5rem 2.31rem 5.44rem 2.19rem;
+    }
+    &__title {
+      max-width: 31.9375rem;
+      font-size: 4rem;
+      line-height: 4.625rem;
+    }
+  } 
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    &__container {
+      width: 90.83%;
+      margin: 0 auto;
+      gap: 3.5rem;
+      padding: 16.5rem 0 4.12rem;
+    }
+    &__title {
+      max-width: 24.5625rem;
+      margin: 0 auto;
+      font-size: 3rem;
+      line-height: normal;
+    }
+  } 
+}

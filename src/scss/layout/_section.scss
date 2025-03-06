@@ -1,0 +1,42 @@
+.section {
+  position: relative;
+  &__bg {
+    @extend %absolute-fullzise;
+    img, video {
+      @extend %cover-media;
+    }
+    &::before {
+      content: '';
+      @extend %absolute-fullzise;
+      z-index: 2;
+    }
+    &--gradient {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(180deg, rgba(1, 5, 101, 0.00) 0%, #010565 85.59%);
+      }
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: 4;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    &__bg {
+      &--gradient {
+        &::after {
+          height: 80%;
+        }
+      }
+    }
+  } 
+}

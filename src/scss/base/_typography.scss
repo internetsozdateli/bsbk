@@ -76,6 +76,6 @@ html, body {
 
 @media (max-width: 480px) {
   html {
-    font-size: calc(14px + 6 * (100vw - 320px) / 480); // - это от 14px на 320px до 16px на 480px
+    font-size: calc(12px + 12 * (100vw - 320px) / 480); // - это от 14px на 320px до 16px на 480px
   }
 }

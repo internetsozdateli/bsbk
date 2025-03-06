@@ -1,0 +1,20 @@
+.brand-icon {
+  display: inline-block;
+  width: 10.7115rem;
+  height: 4.3125rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='172' height='69' viewBox='0 0 172 69' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M154.145 34.4999L85.692 34.4999L85.692 17.25C85.692 7.76447 93.4517 -1.85373e-06 102.931 -2.68247e-06L171.384 -8.6668e-06L171.384 17.25C171.384 26.7355 163.624 34.4999 154.145 34.4999Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M68.4527 69L-9.28699e-05 69L-9.43779e-05 51.75C-9.52072e-05 42.2645 7.75953 34.5001 17.2391 34.5001L85.6919 34.5001L85.6919 51.75C85.6919 61.2355 77.9323 69 68.4527 69Z' fill='white'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+@media (max-width: 768px) {
+  .brand-icon {
+    width: 7rem;
+    height: 2.81825rem;
+  } 
+}
+
+@media (max-width: 480px) {
+  .brand-icon {
+    width: 5.25rem;
+    height: 2.11369rem;
+  } 
+}
