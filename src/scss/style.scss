@@ -3,6 +3,7 @@
 @import 'abstracts/animtations';
 
 @import 'vendors/reset';
+@import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 @import 'base/base';
 @import 'base/typography';
@@ -16,7 +17,9 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/main';
+@import 'layout/text';
 @import 'layout/section';
 @import 'layout/highlights';
+@import 'layout/media-content';
 
 @import 'pages/page';

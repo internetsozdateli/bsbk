@@ -1,0 +1,4 @@
+.text {
+  @extend %flex-column;
+  gap: 1rem;
+}

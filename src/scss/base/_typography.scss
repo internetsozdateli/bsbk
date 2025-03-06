@@ -56,13 +56,16 @@
 
 
 
-html, body {
+html {
   font-family: 'Onest', sans-serif;
   font-size: 0.833333vw; // - это 16px на разрешении 1920px
   font-weight: 400;
   line-height: 142.085%;
   font-style: normal;
   color: #3E3E3E;
+}
+body {
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {

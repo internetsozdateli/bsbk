@@ -1,11 +1,19 @@
 .container {
-  width: 79.375rem;
-  margin: 0 auto;
+  width: 82.68%;
+  margin-left: 9.69rem;
+  @media (min-width: 769px) {
+    margin-right: 7.38rem;
+    &--big {
+      width: 85.35%;
+      margin-left: 7.19rem;
+    }
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     width: 90.63%;
+    margin: 0 auto;
   }
 }
 
