@@ -1,0 +1,10 @@
+.burger-btn {
+  width: 2rem;
+  height: 1.625rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='26' viewBox='0 0 32 26' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 -0.000146627L0 -0.000146627L0 2.5999L32 2.5999V-0.000146627Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 11.701L0 11.701L0 14.301L32 14.301V11.701Z' fill='white'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 23.4L0 23.4L0 26L32 26V23.4Z' fill='white'/%3E%3C/svg%3E") no-repeat center / contain;
+  transition: 0.4s all;
+  &--active {
+    transform: rotate(360deg);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14 12.2496L26.2497 1.75433e-06L27.9996 1.74998L15.75 13.9996L28 26.2496L26.25 27.9996L14 15.7496L1.75003 27.9996L5.54661e-05 26.2496L12.2501 13.9996L0.000406653 1.74997L1.75038 -4.20216e-06L14 12.2496Z' fill='%23fff'/%3E%3C/svg%3E");
+  }
+}

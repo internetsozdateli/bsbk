@@ -1,7 +1,7 @@
 import '../scss/style.scss'
 
-// import { customCursor } from './_customCursor.js';
+import { burgerBtn } from './_burger-btn.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
-    // customCursor();
+    burgerBtn();
 })

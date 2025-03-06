@@ -1,0 +1,8 @@
+.logo {
+  display: block;
+  width: 12.45469rem;
+  height: 3.125rem;
+  img {
+    @extend %contain-media;
+  }
+}

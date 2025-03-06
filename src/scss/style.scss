@@ -7,8 +7,11 @@
 @import 'base/base';
 @import 'base/typography';
 
-// @import 'components/';
+@import 'components/logo';
+@import 'components/btn';
+@import 'components/burger-btn';
 
-// @import 'layout/';
+@import 'layout/container';
+@import 'layout/header';
 
 @import 'pages/page';

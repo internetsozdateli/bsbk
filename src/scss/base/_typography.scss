@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-Black.ttf') format('truetype');
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-ExtraBold.ttf') format('truetype');
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-ExtraLight.ttf') format('truetype');
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-Light.ttf') format('truetype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-Regular.ttf') format('truetype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Onest';
+  src: url('../fonts/onest/Onest-Thin.ttf') format('truetype');
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+
+
+
+html, body {
+  font-family: 'Onest', sans-serif;
+  font-size: 0.833333vw; // - это 16px на разрешении 1920px
+  font-weight: 400;
+  line-height: 142.085%;
+  font-style: normal;
+  color: #3E3E3E;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: calc(12px + 10.7037 * (100vw - 481px) / 768); // - это от 12px на 480px до 14px на 768px
+  }
+  body {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: calc(14px + 6 * (100vw - 320px) / 480); // - это от 14px на 320px до 16px на 480px
+  }
+}
