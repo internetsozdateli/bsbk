@@ -1,0 +1,20 @@
+.footer {
+  background: #000;
+  &__container {
+    padding-top: 0.38rem;
+    padding-bottom: 0.38rem;
+  }
+  &__copyright {
+    font-size: 0.625rem;
+    line-height: normal;
+    color: #999;
+    text-align: center;
+    a {
+      font-weight: 700;
+      transition: 0.3s all;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
