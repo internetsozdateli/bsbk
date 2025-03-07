@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSBK_fin</title>
+    <script type="module" crossorigin src="./js/main.js"></script>
+    <link rel="stylesheet" crossorigin href="./css/style.css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <header class="header">
+        <div class="header__container">
+          <a class="header__logo logo" href="/">
+            <img class="header__logo-dark" src="./images/logo.svg" alt="Белорусская строительная бассейновая компания">
+            <img class="header__logo-white" src="./images/logo-white.svg" alt="Белорусская строительная бассейновая компания">
+          </a>
+          <div class="header__inner">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#">О компании</a>
+                </li>
+                <li class="header__nav-item header__nav-item--active">
+                  <a class="header__nav-link" href="#">Бренды</a>
+                </li>
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#">Проекты</a>
+                </li>
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#">Команда</a>
+                </li>
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#">Сервис</a>
+                </li>
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__footer">
+              <a class="btn btn--phone" href="tel:">Связаться</a>
+            </div>
+          </div>
+          <button class="header__burger-btn burger-btn" data-target="header.header" data-class="header--burger-active"></button>
+        </div>
+      </header>
+      <!-- /header -->
+
+      <main class="main">
+
+        <section class="hero-section section">
+          <div class="section__bg section__bg--gradient">
+            <img src="./images/banner-1.jpg" alt="">
+            <!-- <video autoplay loop muted playsinline preload="yes">
+              <source type="video/mp4" src="">
+            </video> -->
+          </div>
+          <div class="hero-section__container section__container">
+            <div class="hero-section__title">проектируем<br>водную <span class="brand-icon"></span><br>стихию</div>
+            <div class="hero-section__highlights highlights">
+              <div class="highlights__item">
+                <div class="highlights__item-title"><span class="counter" data-target="40">0</span>+</div>
+                <p class="highlights__item-text">Реализованных частных объектов за год</p>
+              </div>
+              <div class="highlights__item">
+                <div class="highlights__item-title"><span class="counter" data-target="6">0</span></div>
+                <p class="highlights__item-text">Производственных площадок в РБ и РФ</p>
+              </div>
+              <div class="highlights__item">
+                <div class="highlights__item-title"><span class="counter" data-target="17">0</span></div>
+                <p class="highlights__item-text">Лет на рынке производства и проектировки бассейнов</p>
+              </div>
+              <div class="highlights__item">
+                <div class="highlights__item-title"><span class="counter" data-target="47">0</span></div>
+                <p class="highlights__item-text">Произведенных композитных бассейнов за год</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /hero-section -->
+
+        <section class="about-section section">
+          <div class="about-section__container section__container container container--big">
+            <div class="media-content">
+              <div class="media-content__media media-content__media--player" data-fancybox data-src="https://videos.pexels.com/video-files/5136490/5136490-hd_1080_1920_30fps.mp4">
+                <img src="./images/about.jpg" alt="группа компаний">
+              </div>
+              <div class="media-content__content">
+                <h2 class="media-content__content-title">группа<br> компаний</h2>
+                <div class="media-content__content-text text">
+                  <p>Группа компаний БСБК, ООО «Акваполис», специализирующаяся на проектировании и строительстве бассейнов, поставке оборудования для бассейнов и гидромассажных СПА-бассейнов. Так же компания является главным партнером завода изготовителя  композитных бассейнов для частных домов и коттеджей, СПА-комплексов, фитнес-клубов, аквапарков и других коммерческих объектов.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /about-section -->
+
+        <section class="brands-section section">
+          <div class="brands-section__container section__container container">
+            <div class="section__header">
+              <h2 class="section__title"></h2>
+              <div class="section__text text">
+                <p>БСБК объединяет и сотрудничает с ведущие компаниями в сфере проектирования, строительства и обслуживания бассейнов, что обеспечивает полный цикл работ. Наши партнеры – лидеры в производстве оборудования и материалов, что гарантирует использование только передовых технологий и надежных решений в каждом проекте.</p>
+              </div>
+            </div>
+            <div class="brands-section__promos promos">
+              <div class="promos__item">
+                <div class="promos__item-logo">
+                  <img src="./images/bsbk-logo.svg" alt="">
+                </div>
+                <div class="promos__item-text text">
+                  <p>БСБК-Сервис – специализированный бренд, занимающийся профессиональным сервисным обслуживанием бассейнов. Мы обеспечиваем чистоту воды, бесперебойную работу всех систем и продлеваем срок службы оборудования. </p>
+                </div>
+                <div class="promos__item-image">
+                  <img src="./images/bsbk.png" alt="">
+                </div>
+              </div>
+              <div class="promos__item">
+                <div class="promos__item-logo">
+                  <img src="./images/pool_store-logo.svg" alt="">
+                </div>
+                <div class="promos__item-text text">
+                  <p>POOL-STORE - крупнейший интернет-магазин, занимающийся поставкой и продажей оборудования и комплектующих для бассейнов.</p>
+                </div>
+                <div class="promos__item-image">
+                  <img src="./images/pool_store.png" alt="">
+                </div>
+              </div>
+              <div class="promos__item">
+                <div class="promos__item-logo">
+                  <img src="./images/lux_spa-logo.svg" alt="">
+                </div>
+                <div class="promos__item-text text">
+                  <p>LUX SPA — первый официальный представитель европейских SPA-бассейнов IQUE, Wellis и поставщик Hydropool, Jacuzzi в Беларуси. Более 5 лет компания предлагает популярные модели и эксклюзивные новинки на рынке Беларуси.</p>
+                </div>
+                <div class="promos__item-image">
+                  <img src="./images/lux_spa.png" alt="">
+                </div>
+              </div>
+              <div class="promos__item">
+                <div class="promos__item-logo">
+                  <img src="./images/composit-logo.svg" alt="">
+                </div>
+                <div class="promos__item-text text">
+                  <p>COMPOSIT — первый в Беларуси производитель композитных бассейнов для частных и коммерческих объектов. Надежным партнером компании является CG POOLS — крупнейший производитель композитных бассейнов для коттеджей, СПА-комплексов, фитнес-клубов и аквапарков.</p>
+                </div>
+                <div class="promos__item-image">
+                  <img src="./images/composit.png" alt="">
+                </div>
+              </div>
+              <div class="promos__item">
+                <div class="promos__item-logo">
+                  <img src="./images/bsbk_service-logo.svg" alt="">
+                </div>
+                <div class="promos__item-text text">
+                  <p>БСБК-Сервис – подразделение БСБК, предоставляющее услуги по обслуживанию бассейнов, агрегатов и инженерных систем. Мы следим за чистотой воды, проводим диагностику, профилактику и ремонт, обеспечивая бесперебойную работу оборудования. </p>
+                </div>
+                <div class="promos__item-image">
+                  <img src="./images/bsbk_service.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /brands-section -->
+
+        <section class="logos-section section">
+          <div class="logos-section__container section__container container">
+            <h2 class="logos-section__title section__title section__title--small">Нам доверяют</h2>
+            <div class="images-carousel" data-src="images/logos/robinson.png,images/logos/ruzhanskij-sanatorij.png,images/logos/sputnik.png,images/logos/yunost.png"></div>
+          </div>
+        </section>
+        <!-- /logos-section -->
+
+        <section class="opportunities-section section">
+          <div class="opportunities-section__container section__container container">
+            <h2 class="opportunities-section__title section__title"></h2>
+            <div class="opportunities-section__chess-content chess-content">
+              <div class="chess-content__item">
+                <div class="chess-content__item-content">
+                  <h3 class="chess-content__item-title">проектирование</h3>
+                  <div class="chess-content__item-text text">
+                    <p>Мы разрабатываем индивидуальные проекты бассейнов с учётом всех технических требований, пожеланий заказчика и архитектурных особенностей объекта. В процессе проектирования учитываются гидродинамика, фильтрация, системы подогрева, освещение и элементы безопасности. Предоставляем полный комплект чертежей и спецификаций для строительства бассейна любой сложности.</p>
+                  </div>
+                </div>
+                <div class="chess-content__item-image">
+                  <img src="./images/designing.jpg" alt="проектирование">
+                </div>
+              </div>
+              <div class="chess-content__item">
+                <div class="chess-content__item-content">
+                  <h3 class="chess-content__item-title">строительство</h3>
+                  <div class="chess-content__item-text text">
+                    <p>Строим бассейны любого типа: частные, общественные, спортивные, оздоровительные и SPA-зоны. Используем современные технологии, качественные материалы и профессиональное оборудование для обеспечения долговечности и комфорта эксплуатации. Выполняем все этапы строительства — от земляных работ до установки оборудования и отделки.</p>
+                  </div>
+                </div>
+                <div class="chess-content__item-image">
+                  <img src="./images/construction.jpg" alt="строительство">
+                </div>
+              </div>
+              <div class="chess-content__item">
+                <div class="chess-content__item-content">
+                  <h3 class="chess-content__item-title">обслуживание</h3>
+                  <div class="chess-content__item-text text">
+                    <p>Предоставляем полный спектр услуг по обслуживанию бассейнов: регулярную чистку, контроль химического состава воды, диагностику и ремонт оборудования, замену фильтров и насосов. Обеспечиваем бесперебойную работу систем и продлеваем срок службы бассейна. Возможны как разовые услуги, так и комплексное техническое сопровождение.</p>
+                  </div>
+                </div>
+                <div class="chess-content__item-image">
+                  <img src="./images/service.jpg" alt="обслуживание">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /opportunities-section -->
+
+        <section class="projects-section section">
+          <div class="projects-section__container section__container container">
+            <div class="expandable-list">
+              <div class="expandable-list__items">
+                <div class="expandable-list__item collage">
+                  <div class="collage__images">
+                    <div class="collage__image">
+                      <img src="./images/robinson-1.jpg" alt="">
+                    </div>
+                    <div class="collage__image">
+                      <img src="./images/robinson-2.jpg" alt="">
+                    </div>
+                    <div class="collage__image">
+                      <img src="./images/robinson-3.jpg" alt="">
+                    </div>
+                    <div class="collage__image">
+                      <img src="./images/robinson-4.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="collage__content">
+                    <div class="collage__title">реконструкция бассейнов «Робинсон Клуб».</div>
+                    <div class="collage__text text">
+                      <p>Проект частного бассейна под открытым небом для компании “Ривьера”. Проект интересен поставленной задачей и реализацией. Это многофункциональный комплекс, который  радует своих посетителей и владельцев.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="expandable-list__btn btn btn--fill">Еще проекты</button>
+            </div>
+          </div>
+        </section>
+        <!-- /projects-section -->
+
+        <section class="team-section section">
+          <div class="team-section__container section__container container">
+            <h2 class="team-section__title section__title"></h2>
+            <div class="team-section__promos promos">
+              <div class="promos__item promos__item--row">
+                <div class="promos__item-logo">
+                  <img src="./images/bsbk-logo.svg" alt="">
+                </div>
+                <div class="promos__item-text text">
+                  <p>В основе Белорусской Строительной Бассейновой Компании лежит опыт, профессионализм и страсть к своему делу. Наша команда — это сплочённый коллектив высококвалифицированных специалистов, которые готовы воплощать самые смелые идеи и сложные проекты.</p>
+                </div>
+                <div class="promos__item-image">
+                  <img src="./images/team-1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="team-section__cards cards scrollable-row">
+              <div class="cards__item scrollable-row__item">
+                <div class="cards__item-image">
+                  <img src="./images/engineers-and-designers.jpg" alt="">
+                </div>
+                <div class="cards__item-content">
+                  <div class="cards__item-title">Инженеры и проектировщики</div>
+                  <div class="cards__item-text text">
+                    <p>Мы разрабатываем бассейны, которые идеально соответствуют вашим желаниям и техническим требованиям. Наша команда проектировщиков:</p>
+                  </div>
+                  <ul class="cards__item-list">
+                    <li class="cards__item-list-item">Создаёт уникальные концепции, учитывая все особенности пространства.</li>
+                    <li class="cards__item-list-item">Использует передовые технологии 3D-моделирования для визуализации проекта.</li>
+                    <li class="cards__item-list-item">Обеспечивает точные расчёты, гарантирующие безопасность и долговечность конструкции.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cards__item scrollable-row__item">
+                <div class="cards__item-image">
+                  <img src="./images/construction-masters.jpg" alt="">
+                </div>
+                <div class="cards__item-content">
+                  <div class="cards__item-title">Мастера строительства</div>
+                  <div class="cards__item-text text">
+                    <p>Наша строительная команда — это профессионалы с многолетним опытом, которые знают всё о возведении бассейнов. Мы обеспечиваем:</p>
+                  </div>
+                  <ul class="cards__item-list">
+                    <li class="cards__item-list-item">Высокую точность выполнения строительных работ.</li>
+                    <li class="cards__item-list-item">Использование современных материалов и технологий.</li>
+                    <li class="cards__item-list-item">Безупречное качество отделки, от облицовки до установки систем очистки воды.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cards__item scrollable-row__item">
+                <div class="cards__item-image">
+                  <img src="./images/technicians-and-service-specialists.jpg" alt="">
+                </div>
+                <div class="cards__item-content">
+                  <div class="cards__item-title">Техники и сервисные специалисты</div>
+                  <div class="cards__item-text text">
+                    <p>Для нас важно, чтобы ваш бассейн оставался в идеальном состоянии. Именно поэтому наша сервисная команда предлагает:</p>
+                  </div>
+                  <ul class="cards__item-list">
+                    <li class="cards__item-list-item">Установку и настройку оборудования (фильтрация, подогрев, освещение).</li>
+                    <li class="cards__item-list-item">Регулярное обслуживание бассейнов, включая очистку и профилактику систем.</li>
+                    <li class="cards__item-list-item">Оперативное устранение любых неисправностей.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cards__item scrollable-row__item">
+                <div class="cards__item-image">
+                  <img src="./images/client-managers.jpg" alt="">
+                </div>
+                <div class="cards__item-content">
+                  <div class="cards__item-title">Клиент-менеджеры</div>
+                  <div class="cards__item-text text">
+                    <p>Мы понимаем, как важно уделять внимание каждому клиенту. Наша команда клиент-менеджеров:</p>
+                  </div>
+                  <ul class="cards__item-list">
+                    <li class="cards__item-list-item">Профессионально консультирует на всех этапах работы.</li>
+                    <li class="cards__item-list-item">Помогает определиться с выбором материалов, дизайна и оборудования.</li>
+                    <li class="cards__item-list-item">Оперативно решает любые вопросы, связанные с проектом.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /team-section -->
+
+        <section class="service-section section">
+          <div class="section__bg">
+            <img src="./images/banner-2.jpg" alt="">
+          </div>
+          <div class="service-section__container section__container container">
+            <h2 class="service-section__title section__title"></h2>
+            <div class="service-section__row">
+              <div class="service-section__contacts">
+                <p>Отдел сервисного обслуживания бассейнов: <a href="+375445010909">+375 (44) 501 09 09</a></p>
+              </div>
+              <div class="service-section__advantages">
+                <div class="service-section__text section__text text">
+                  <p></p>
+                </div>
+                <div class="border-blocks">
+                  <div class="border-blocks__item">
+                    <div class="border-blocks__item-title">Регулярное техническое обслуживание</div>
+                    <div class="border-blocks__item-row">
+                      <div class="border-blocks__item-icon">
+                        <img src="./images/gear.svg" alt="">
+                      </div>
+                      <div class="border-blocks__item-text text">
+                        <p>Строго по графику проверяем и регулируем уровень pH и содержание хлора в воде, обслуживаем оборудование, заменяем расходные материалы.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-blocks__item">
+                    <div class="border-blocks__item-title">Ремонт и замена оборудования</div>
+                    <div class="border-blocks__item-row">
+                      <div class="border-blocks__item-icon">
+                        <img src="./images/gears.svg" alt="">
+                      </div>
+                      <div class="border-blocks__item-text text">
+                        <p>Выполняем быстрый и качественный ремонт или плановую замену оборудования в бассейне, проводим реконструкцию и модернизацию текущего оборудования.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-blocks__item">
+                    <div class="border-blocks__item-title">Отзывчивость и дружелюбие</div>
+                    <div class="border-blocks__item-row">
+                      <div class="border-blocks__item-icon">
+                        <img src="data:image/svg+xml,%3csvg%20width='26'%20height='26'%20viewBox='0%200%2026%2026'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M13%2026C12.9236%2026%2012.8345%2025.9741%2012.7708%2025.9224C12.2488%2025.4959%200%2015.3877%200%207.15376C0%203.54738%201.82076%200.884603%204.762%200.173668C7.85602%20-0.56312%2011.1538%201.09142%2012.9873%204.24539C14.999%200.651933%2018.5642%20-0.369228%2021.1616%200.225372C24.7267%201.05264%2026%204.34879%2026%207.15376C26%2010.6309%2023.8482%2014.8448%2019.5828%2019.6921C16.4378%2023.2726%2013.2547%2025.8966%2013.2165%2025.9224C13.1528%2025.9741%2013.0764%2026%2012.9873%2026H13ZM6.28992%200.716564C5.84427%200.716564%205.3859%200.768268%204.92753%200.884603C2.29187%201.51798%200.725759%203.8576%200.725759%207.15376C0.725759%2014.4311%2011.3066%2023.725%2013%2025.1598C14.6934%2023.725%2025.2742%2014.4441%2025.2742%207.15376C25.2742%203.88346%2023.6827%201.55676%2020.9961%200.936307C18.526%200.367559%2015.0754%201.45335%2013.3183%205.17607C13.2547%205.30533%2013.1273%205.38288%2013%205.38288C12.8727%205.38288%2012.7326%205.30533%2012.669%205.17607C11.5358%202.87522%209.15475%200.716564%206.28992%200.716564Z'%20fill='white'/%3e%3c/svg%3e" alt="">
+                      </div>
+                      <div class="border-blocks__item-text text">
+                        <p>Команда БСБК СЕРВИС отзывчивая и дружелюбная. Оказываем профессиональную помощь, консультируем по всем вопросам, связанным с бассейном.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-blocks__item">
+                    <div class="border-blocks__item-title">Гибкость и быстрое реагирование</div>
+                    <div class="border-blocks__item-row">
+                      <div class="border-blocks__item-icon">
+                        <img src="data:image/svg+xml,%3csvg%20width='28'%20height='28'%20viewBox='0%200%2028%2028'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14%2028C6.28483%2028%200%2021.7152%200%2014C0%206.28482%206.28483%200%2014%200C21.7152%200%2028%206.28482%2028%2014C28%2021.7152%2021.7152%2028%2014%2028ZM14%201.23529C6.95665%201.23529%201.23529%206.95665%201.23529%2014C1.23529%2021.0433%206.95665%2026.7647%2014%2026.7647C21.0433%2026.7647%2026.7647%2021.0433%2026.7647%2014C26.7647%206.95665%2021.0433%201.23529%2014%201.23529Z'%20fill='white'/%3e%3cpath%20d='M13.9773%206.17631C13.6305%206.17631%2013.3705%205.89458%2013.3705%205.5695V0.693342C13.3705%200.346593%2013.6522%200.0865253%2013.9773%200.0865253C14.3024%200.0865253%2014.5841%200.368265%2014.5841%200.693342V5.5695C14.5841%205.91625%2014.3024%206.17631%2013.9773%206.17631Z'%20fill='white'/%3e%3cpath%20d='M13.9773%2027.9566C13.6305%2027.9566%2013.3705%2027.6749%2013.3705%2027.3498V22.4736C13.3705%2022.1269%2013.6522%2021.8668%2013.9773%2021.8668C14.3024%2021.8668%2014.5841%2022.1486%2014.5841%2022.4736V27.3498C14.5841%2027.6966%2014.3024%2027.9566%2013.9773%2027.9566Z'%20fill='white'/%3e%3cpath%20d='M13.9773%2014.5632C13.6305%2014.5632%2013.3705%2014.2815%2013.3705%2013.9564V9.08027C13.3705%208.73352%2013.6522%208.47346%2013.9773%208.47346C14.3024%208.47346%2014.5841%208.75519%2014.5841%209.08027V13.9564C14.5841%2014.3032%2014.3024%2014.5632%2013.9773%2014.5632Z'%20fill='white'/%3e%3cpath%20d='M14.4104%2014.39C14.172%2014.6284%2013.782%2014.6284%2013.5436%2014.39L10.0977%2010.9442C9.85936%2010.7058%209.85936%2010.3157%2010.0977%2010.0773C10.3361%209.8389%2010.7262%209.8389%2010.9646%2010.0773L14.4104%2013.5231C14.6488%2013.7615%2014.6488%2014.1516%2014.4104%2014.39Z'%20fill='white'/%3e%3cpath%20d='M27.2629%2014.8447H22.3868C22.04%2014.8447%2021.78%2014.563%2021.78%2014.2379C21.78%2013.9129%2022.0617%2013.6311%2022.3868%2013.6311H27.2629C27.6097%2013.6311%2027.8697%2013.9129%2027.8697%2014.2379C27.8697%2014.563%2027.588%2014.8447%2027.2629%2014.8447Z'%20fill='white'/%3e%3cpath%20d='M5.50415%2014.8447H0.627985C0.281236%2014.8447%200.021175%2014.563%200.021175%2014.2379C0.021175%2013.9129%200.302908%2013.6311%200.627985%2013.6311H5.50415C5.8509%2013.6311%206.11096%2013.9129%206.11096%2014.2379C6.11096%2014.563%205.82922%2014.8447%205.50415%2014.8447Z'%20fill='white'/%3e%3c/svg%3e" alt="">
+                      </div>
+                      <div class="border-blocks__item-text text">
+                        <p>Быстро отвечаем на запросы клиентов, оперативно решаем проблемы, связанные с бассейном.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-blocks__item">
+                    <div class="border-blocks__item-title">Обучение владельца бассейна</div>
+                    <div class="border-blocks__item-row">
+                      <div class="border-blocks__item-icon">
+                        <img src="data:image/svg+xml,%3csvg%20width='37'%20height='32'%20viewBox='0%200%2037%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M28.764%2013.5331V20.3603C28.764%2023.5368%2026.5492%2026.1103%2023.8155%2026.1103H13.1845C10.4508%2026.1103%208.23603%2023.5368%208.23603%2020.3603V13.5331M32.6525%2031V11.5257L18.5%209.83456M1%209.83456L18.5%201L36%209.83456L18.5%2018.6691L1%209.83456Z'%20stroke='white'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="">
+                      </div>
+                      <div class="border-blocks__item-text text">
+                        <p>Обучаем безопасной эксплуатации бассейна, правильному уходу за бассейном и оборудованием.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="border-blocks__item">
+                    <div class="border-blocks__item-title">Индивидуальный подход</div>
+                    <div class="border-blocks__item-row">
+                      <div class="border-blocks__item-icon">
+                        <img src="data:image/svg+xml,%3csvg%20width='24'%20height='29'%20viewBox='0%200%2024%2029'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.5632%2027.923H0.801011V22.344C0.801011%2017.7909%204.51096%2014.095%209.05003%2014.095C12.1838%2014.095%2015.0084%2015.8375%2016.4278%2018.6341C16.5261%2018.8308%2016.765%2018.9151%2016.9618%2018.8167C17.1585%2018.7184%2017.2428%2018.4795%2017.1445%2018.2827C15.964%2015.9359%2013.8842%2014.2777%2011.425%2013.6172C14.0528%2012.5913%2015.9359%2010.0337%2015.9359%207.05453C15.9359%203.16189%2012.774%200%208.88139%200C4.98876%200%201.82687%203.16189%201.82687%207.05453C1.82687%2010.104%203.78021%2012.6897%206.49241%2013.6734C2.7403%2014.7836%200%2018.2546%200%2022.3581V28.3305C0%2028.5554%200.182687%2028.724%200.393479%2028.724H12.5492C12.774%2028.724%2012.9427%2028.5413%2012.9427%2028.3305C12.9427%2028.1197%2012.76%2027.937%2012.5492%2027.937L12.5632%2027.923ZM2.64193%207.04047C2.64193%203.59753%205.4525%200.78696%208.89544%200.78696C12.3384%200.78696%2015.149%203.59753%2015.149%207.04047C15.149%2010.4834%2012.3384%2013.294%208.89544%2013.294C5.4525%2013.294%202.64193%2010.4834%202.64193%207.04047Z'%20fill='white'/%3e%3cpath%20d='M22.9902%2020.4181C22.8216%2020.2776%2022.5686%2020.2916%2022.4281%2020.4602L16.2308%2027.5991L14.5585%2024.6199C14.4461%2024.4231%2014.2072%2024.3529%2014.0105%2024.4653C13.8137%2024.5777%2013.7575%2024.8166%2013.8559%2025.0134L15.8092%2028.4985C15.8795%2028.6109%2015.9919%2028.6811%2016.1184%2028.6952C16.1184%2028.6952%2016.1465%2028.6952%2016.1605%2028.6952C16.273%2028.6952%2016.3854%2028.639%2016.4557%2028.5547L23.0324%2020.9942C23.1729%2020.8256%2023.1589%2020.5727%2022.9902%2020.4321V20.4181Z'%20fill='white'/%3e%3c/svg%3e" alt="">
+                      </div>
+                      <div class="border-blocks__item-text text">
+                        <p>Для нас каждый бассейн уникален. В работе мы учитываем особенности конкретного бассейна и его оборудования.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /service-section -->
+
+        <section class="contacts-section section">
+          <div class="contacts-section__container section__container container">
+            <h2 class="contacts-section__title section__title"></h2>
+            <div class="contacts">
+              <div class="contacts__item">
+                <div class="contacts__item-title">instagram</div>
+                <a class="contacts__item-value" href="" target="_blank">@bsbk_pools</a>
+              </div>
+              <div class="contacts__item">
+                <div class="contacts__item-title">e-mail</div>
+                <a class="contacts__item-value" href="">info@bsbk.by</a>
+              </div>
+              <div class="contacts__item">
+                <div class="contacts__item-title">телефон</div>
+                <a class="contacts__item-value" href="">+375 29 106 55 99</a>
+              </div>
+              <div class="contacts__item">
+                <div class="contacts__item-title">адрес</div>
+                <a class="contacts__item-value" href="" target="_blank">аг. Ждановичи, ул. Цветочная 25, офис. 3/2</a>
+              </div>
+            </div>
+          </div>
+          <div class="contacts-section__map map">
+            <div style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a href="https://yandex.by/maps/29630/minsk-district/house/Zk4YcgZlSUIEQFtpfXVydX1mYA==/?ll=27.415140%2C53.934135&utm_medium=mapframe&utm_source=maps&z=21" style="color:#eee;font-size:12px;position:absolute;top:14px;">Цветочная улица, 25 — Яндекс Карты</a><iframe src="https://yandex.by/map-widget/v1/?ll=27.415140%2C53.934135&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjkzMjI0NTU3EnfQkdC10LvQsNGA0YPRgdGMLCDQnNGW0L3RgdC60ZYg0YDQsNGR0L0sINCw0LPRgNCw0LPQsNGA0LDQtNC-0Log0JbQtNCw0L3QvtCy0ZbRh9GLLCDQmtCy0LXRgtC60LDQstCw0Y8g0LLRg9C70ZbRhtCwLCAyNSIKDRBS20EVkrxXQg%2C%2C&z=21" width="100" height="100" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+          </div>
+        </section>
+
+      </main>
+      <!-- /main -->
+
+      <footer class="footer">
+        <div class="footer__container container">
+          <p class="footer__copyright">Copyright © 2025  |  ООО “Белорусская строительная бассейновая компания“  |  Разработано в <a href="https://grafitstudio.by/" target="_blank">grafit</a></p>
+        </div>
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /wrapper -->
+
+  </body>
+</html>
