@@ -31,7 +31,5 @@ export function text() {
     // Вызываем при загрузке и вешаем обработчик ресайза
     setLineClamp();
     window.addEventListener('resize', setLineClamp);
-    window.addEventListener('resize', () => { console.log(window.innerWidth);
-     });
   });
 }

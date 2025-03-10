@@ -1,0 +1,16 @@
+.images-carousel {
+  &__item {
+    height: 3.95625rem;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .images-carousel {
+    &__item {
+      height: 2.97rem;
+    }
+  }
+}

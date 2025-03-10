@@ -3099,9 +3099,60 @@ function text() {
     });
   });
 }
+function imagesCarousel() {
+  const carousel = document.querySelector(".images-carousel");
+  if (carousel) {
+    let loadImage2 = function(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = () => resolve(img);
+        img.onerror = () => reject(new Error(`Не удалось загрузить изображение: ${src}`));
+        img.src = src;
+      });
+    };
+    var loadImage = loadImage2;
+    const srcList = carousel.dataset.src.split(",").map((src) => src.trim());
+    const remToPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const spacing = 3 * remToPx;
+    Promise.all(srcList.map(loadImage2)).then((images) => {
+      const totalWidth = images.reduce((width, img) => width + img.width, 0) + (images.length - 1) * spacing + spacing;
+      const maxHeight = Math.max(...images.map((img) => img.height));
+      const canvas = document.createElement("canvas");
+      canvas.width = totalWidth;
+      canvas.height = maxHeight;
+      const ctx = canvas.getContext("2d");
+      let x2 = 0;
+      images.forEach((img) => {
+        ctx.drawImage(img, x2, 0);
+        x2 += img.width + spacing;
+      });
+      const dataURL = canvas.toDataURL();
+      carousel.style.backgroundImage = `url(${dataURL})`;
+      carousel.style.backgroundRepeat = "repeat no-repeat";
+      const animationName = "scrollBackground";
+      const styleSheet = document.styleSheets[0] || document.head.appendChild(document.createElement("style")).sheet;
+      const keyframes = `
+        @keyframes ${animationName} {
+          0% {
+            background-position-x: 0;
+          }
+          100% {
+            background-position-x: -${totalWidth}px;
+          }
+        }
+      `;
+      styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+      carousel.style.animation = `${animationName} 10s linear infinite`;
+    }).catch((error) => {
+      console.error("Ошибка загрузки изображения:", error);
+    });
+  }
+}
 document.addEventListener("DOMContentLoaded", function() {
   burgerBtn();
   counter();
   fancyboxInit();
   text();
+  imagesCarousel();
 });

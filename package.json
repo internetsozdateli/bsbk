@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "autoprefixer": "^10.4.20",
     "resolve": "^1.22.10",
     "sass": "^1.85.1",

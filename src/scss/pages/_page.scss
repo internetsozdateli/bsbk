@@ -125,3 +125,43 @@
     }
   }
 }
+
+
+
+
+
+// ===================================
+// logos-section
+// ===================================
+.logos-section {
+  padding-top: 3.165rem;
+  padding-bottom: 5.565rem;
+  &__images-carousel {
+    &:not(:first-child) {
+      margin-top: 4.64rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-section {
+    padding-top: 3.75rem;
+    padding-bottom: 4.385rem;
+    &__images-carousel {
+      &:not(:first-child) {
+        margin-top: 3.39rem;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .logos-section {
+    padding-top: 3.96rem;
+    padding-bottom: 4.11rem;
+    &__images-carousel {
+      &:not(:first-child) {
+        margin-top: 2.63rem;
+      }
+    }
+  }
+}

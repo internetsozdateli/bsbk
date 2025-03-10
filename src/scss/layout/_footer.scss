@@ -1,5 +1,9 @@
 .footer {
   background: #000;
+  @media (min-width: 769px) {
+    width: calc(100% - 24rem);
+    margin-left: auto;
+  }
   &__container {
     padding-top: 0.38rem;
     padding-bottom: 0.38rem;
