@@ -3071,8 +3071,37 @@ function fancyboxInit() {
     // Your custom options
   });
 }
+function text() {
+  const promoTexts = document.querySelectorAll(".text:has(.text__spoiler)");
+  promoTexts.forEach((block) => {
+    const textInner = block.querySelector(".text__inner");
+    const setLineClamp = () => {
+      const desktopLines = block.dataset.spoilerDesktop ? parseInt(block.dataset.spoilerDesktop, 10) : null;
+      const tabletLines = block.dataset.spoilerTablet ? parseInt(block.dataset.spoilerTablet, 10) : null;
+      const mobileLines = block.dataset.spoilerMobile ? parseInt(block.dataset.spoilerMobile, 10) : null;
+      let lines = desktopLines;
+      if (window.innerWidth < 769 && window.innerWidth >= 481) {
+        lines = tabletLines;
+      } else if (window.innerWidth < 481) {
+        lines = mobileLines;
+      }
+      if (lines === null || lines > 0) {
+        textInner.style.display = "-webkit-box";
+        textInner.style.webkitLineClamp = lines || "unset";
+      } else if (lines === 0) {
+        textInner.style.display = "none";
+      }
+    };
+    setLineClamp();
+    window.addEventListener("resize", setLineClamp);
+    window.addEventListener("resize", () => {
+      console.log(window.innerWidth);
+    });
+  });
+}
 document.addEventListener("DOMContentLoaded", function() {
   burgerBtn();
   counter();
   fancyboxInit();
+  text();
 });
