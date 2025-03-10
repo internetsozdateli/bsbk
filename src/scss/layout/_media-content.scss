@@ -71,8 +71,7 @@
   .media-content {
     gap: 2.81rem;
     &__media {
-      flex: 0 0 21.0625rem;
-      @extend %proportional-media;
+      flex: 0 0 48.35%;
       padding-bottom: 32.327%;
       img, video {
         border-radius: 2rem;
@@ -102,37 +101,34 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .media-content {
-    gap: 2.81rem;
+    flex-direction: column;
+    gap: 2.69rem;
     &__media {
-      flex: 0 0 48.35%;
-      @extend %proportional-media;
-      padding-bottom: 32.327%;
+      flex: auto;
+      width: 100%;
+      padding-bottom: 67.437%;
       img, video {
-        border-radius: 2rem;
+        border-radius: 2.1875rem;
       }
       &--player {
         &::before {
-          width: 5rem;
-          height: 5rem;
-          bottom: 1.005rem;
-          right: -1.995rem;
+          width: 6rem;
+          height: 6rem;
+          bottom: -2.195rem;
+          right: 1.505rem;
         }
         &::after {
-          bottom: 1.5rem;
-          right: -1.5rem;
-          width: 4rem;
-          height: 4rem;
+          bottom: -1.7rem;
+          right: 2rem;
+          width: 5rem;
+          height: 5rem;
         }
       }
     }
     &__content {
-      padding-top: 0;
-      gap: 1.88rem;
-      &-title {
-        font-size: 2rem;
-      }
+      gap: 1.69rem;
     }
   }
 }

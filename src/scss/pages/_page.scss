@@ -61,3 +61,15 @@
   padding-top: 5.19rem;
   padding-bottom: 4.9rem;
 }
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 4.69rem;
+    padding-bottom: 3.28rem;
+  }
+}
+@media (max-width: 480px) {
+  .about-section {
+    padding-top: 3.94rem;
+    padding-bottom: 2.72rem;
+  }
+}
