@@ -15,6 +15,27 @@
     background: $primaryColor;
     color: #fff;
   }
+  &--fill, &--grey {
+    border-radius: 3.4375rem;
+  }
+  &--fill {
+    padding: 0.84rem 1.57rem 0.8rem;
+    background: $primaryColor2;
+    line-height: normal;
+    color: #fff;
+    &:hover {
+      color: $primaryColor2;
+      background: transparent;
+    }
+  }
+  &--grey {
+    padding: 0.74rem 1.57rem 0.7rem;
+    border-color: #767E88;
+    color: #767E88;
+    &:hover {
+      background: #767E88;
+    }
+  }
   &--phone {
     position: relative;
     padding-left: 3rem;
