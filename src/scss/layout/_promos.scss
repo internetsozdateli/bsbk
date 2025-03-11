@@ -47,7 +47,7 @@
       overflow: hidden;
       transition: inherit;
       picture {
-        @extend %absolute-fullzise;
+        @extend %absolute-fullsize;
       }
       img {
         @extend %cover-media;

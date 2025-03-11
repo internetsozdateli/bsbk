@@ -48,19 +48,33 @@
       gap: 1.5rem;
     }
     &-link {
+      position: relative;
       font-size: 1rem;
       line-height: normal;
       text-transform: capitalize;
       color: #000;
       transition: 0.4s all;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: #000;
+        transition: inherit;
+      }
       &:hover {
         color: $primaryColor;
       }
     }
     &-item--active &-link {
       color: $primaryColor;
-      text-decoration: underline;
       text-shadow: 0 0 0.05rem #000064;
+      &::after {
+        width: 100%;
+        background: $primaryColor;
+      }
     }
   }
   @media (min-width: 769px) {

@@ -1,13 +1,13 @@
 .section {
   position: relative;
   &__bg {
-    @extend %absolute-fullzise;
+    @extend %absolute-fullsize;
     img, video {
       @extend %cover-media;
     }
     &::before {
       content: '';
-      @extend %absolute-fullzise;
+      @extend %absolute-fullsize;
       z-index: 2;
     }
     &--gradient {
@@ -54,9 +54,18 @@
       text-align: center;
     }
   }
+  &:has(&__bg) .section__title {
+    color: #fff;
+  }
   @media (min-width: 769px) {
     .container:not(.container--big) &__title {
       transform: translateX(-4.75rem);
+    }
+  }
+  &--dark {
+    background: $primaryColor2;
+    .section__title {
+      color: #fff;
     }
   }
 }

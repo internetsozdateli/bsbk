@@ -19,22 +19,22 @@
             <nav class="header__nav">
               <ul class="header__nav-list">
                 <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">О компании</a>
-                </li>
-                <li class="header__nav-item header__nav-item--active">
-                  <a class="header__nav-link" href="#">Бренды</a>
+                  <a class="header__nav-link" href="#o-kompanii">О компании</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">Проекты</a>
+                  <a class="header__nav-link" href="#brendy">Бренды</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">Команда</a>
+                  <a class="header__nav-link" href="#proekty">Проекты</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">Сервис</a>
+                  <a class="header__nav-link" href="#komanda">Команда</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-link" href="#">Контакты</a>
+                  <a class="header__nav-link" href="#servis">Сервис</a>
+                </li>
+                <li class="header__nav-item">
+                  <a class="header__nav-link" href="#kontakty">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -80,7 +80,7 @@
         </section>
         <!-- /hero-section -->
 
-        <section class="about-section section">
+        <section class="about-section section" id="o-kompanii">
           <div class="about-section__container section__container container container--big">
             <div class="media-content">
               <div class="media-content__media media-content__media--player" data-fancybox data-src="https://videos.pexels.com/video-files/5136490/5136490-hd_1080_1920_30fps.mp4">
@@ -97,7 +97,7 @@
         </section>
         <!-- /about-section -->
 
-        <section class="brands-section section">
+        <section class="brands-section section" id="brendy">
           <div class="brands-section__container section__container container container--big">
             <div class="section__header">
               <h2 class="section__title">бренды<br>лидеры</h2>
@@ -246,7 +246,7 @@
             <h2 class="opportunities-section__title section__title">наши<br>возможности</h2>
             <div class="opportunities-section__chess-content chess-content">
               <div class="chess-content__item">
-                <div class="chess-content__item-content">c
+                <div class="chess-content__item-content">
                   <h3 class="chess-content__item-title">проектирование</h3>
                   <div class="chess-content__item-text text">
                     <p>Мы разрабатываем индивидуальные проекты бассейнов с учётом всех технических требований, пожеланий заказчика и архитектурных особенностей объекта. В процессе проектирования учитываются гидродинамика, фильтрация, системы подогрева, освещение и элементы безопасности. Предоставляем полный комплект чертежей и спецификаций для строительства бассейна любой сложности.</p>
@@ -283,7 +283,7 @@
         </section>
         <!-- /opportunities-section -->
 
-        <section class="projects-section section">
+        <section class="projects-section section" id="proekty">
           <div class="projects-section__container section__container container">
             <h2 class="projects-section__title section__title">Проекты</h2>
             <div class="projects-section__expandable-list expandable-list" data-count="1">
@@ -364,7 +364,7 @@
         </section>
         <!-- /projects-section -->
 
-        <section class="team-section section">
+        <section class="team-section section" id="komanda">
           <div class="team-section__container section__container container">
             <h2 class="team-section__title section__title">команда</h2>
             <div class="team-section__promos promos">
@@ -460,19 +460,20 @@
         </section>
         <!-- /team-section -->
 
-        <section class="service-section section">
+        <section class="service-section section" id="servis">
           <div class="section__bg">
             <img src="public/images/banner-2.jpg" alt="">
           </div>
           <div class="service-section__container section__container container">
-            <h2 class="service-section__title section__title"></h2>
+            <h2 class="service-section__title section__title">сервис</h2>
             <div class="service-section__row">
               <div class="service-section__contacts">
-                <p>Отдел сервисного обслуживания бассейнов: <a href="+375445010909">+375 (44) 501 09 09</a></p>
+                <a class="service-section__contacts-btn btn btn--white btn--phone" href="tel:">Связаться</a>
+                <p class="service-section__contacts-text">Отдел сервисного обслуживания бассейнов: <a class="unified" href="+375445010909">+375 (44) 501 09 09</a></p>
               </div>
               <div class="service-section__advantages">
                 <div class="service-section__text section__text text">
-                  <p></p>
+                  <p>Компания БСБК оказывает услуги по сервисному обслуживанию бассейнов. Профессиональная подготовка, сплоченная команда и сотрудничество с зарубежными партнерами делают нас лидерами в своей отрасли.</p>
                 </div>
                 <div class="border-blocks">
                   <div class="border-blocks__item">
@@ -548,10 +549,10 @@
         </section>
         <!-- /service-section -->
 
-        <section class="contacts-section section">
+        <section class="contacts-section section section--dark" id="kontakty">
           <div class="contacts-section__container section__container container">
-            <h2 class="contacts-section__title section__title"></h2>
-            <div class="contacts">
+            <h2 class="contacts-section__title section__title">Контакты</h2>
+            <div class="contacts-section__contacts contacts">
               <div class="contacts__item">
                 <div class="contacts__item-title">instagram</div>
                 <a class="contacts__item-value" href="" target="_blank">@bsbk_pools</a>
@@ -571,7 +572,7 @@
             </div>
           </div>
           <div class="contacts-section__map map">
-            <div style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a href="https://yandex.by/maps/29630/minsk-district/house/Zk4YcgZlSUIEQFtpfXVydX1mYA==/?ll=27.415140%2C53.934135&utm_medium=mapframe&utm_source=maps&z=21" style="color:#eee;font-size:12px;position:absolute;top:14px;">Цветочная улица, 25 — Яндекс Карты</a><iframe src="https://yandex.by/map-widget/v1/?ll=27.415140%2C53.934135&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjkzMjI0NTU3EnfQkdC10LvQsNGA0YPRgdGMLCDQnNGW0L3RgdC60ZYg0YDQsNGR0L0sINCw0LPRgNCw0LPQsNGA0LDQtNC-0Log0JbQtNCw0L3QvtCy0ZbRh9GLLCDQmtCy0LXRgtC60LDQstCw0Y8g0LLRg9C70ZbRhtCwLCAyNSIKDRBS20EVkrxXQg%2C%2C&z=21" width="100" height="100" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            <div style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a href="https://yandex.by/maps/29630/minsk-district/house/Zk4YcgZlSUIEQFtpfXVydX1mYA==/inside/?ll=27.415741%2C53.934197&tab=inside&utm_medium=mapframe&utm_source=maps&z=16.53" style="color:#eee;font-size:12px;position:absolute;top:14px;">Цветочная улица, 25 — Яндекс Карты</a><iframe src="https://yandex.by/map-widget/v1/?ll=27.415741%2C53.934197&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjkzMjI0NTU3EnfQkdC10LvQsNGA0YPRgdGMLCDQnNGW0L3RgdC60ZYg0YDQsNGR0L0sINCw0LPRgNCw0LPQsNGA0LDQtNC-0Log0JbQtNCw0L3QvtCy0ZbRh9GLLCDQmtCy0LXRgtC60LDQstCw0Y8g0LLRg9C70ZbRhtCwLCAyNSIKDRBS20EVkrxXQg%2C%2C&tab=inside&z=16.53" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
           </div>
         </section>
 
@@ -587,6 +588,8 @@
 
     </div>
     <!-- /wrapper -->
+
+    <button class="up-btn"></button>
 
     <script type="module" src="/src/js/main.js"></script>
   </body>

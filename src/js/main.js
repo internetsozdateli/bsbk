@@ -7,6 +7,9 @@ import { text } from './_text.js';
 // import { imagesCarousel } from './_images-carousel.js';
 import { splide } from './_splide.js';
 import { expandableList } from './_expandable-list.js';
+import { scrollToAnchor } from './_scrollToAnchor.js';
+import { headerNav } from './_headerNav.js';
+import { upBtn } from './_up-btn.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
     burgerBtn();
@@ -16,4 +19,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     // imagesCarousel();
     splide();
     expandableList();
+    scrollToAnchor();
+    headerNav();
+    upBtn();
 })

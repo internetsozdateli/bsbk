@@ -307,3 +307,142 @@
     }
   }
 }
+
+
+
+
+
+// ===================================
+// service-section
+// ===================================
+.service-section {
+  padding-top: 4.25rem;
+  padding-bottom: 10.5rem;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    &:not(:first-child) {
+      margin-top: 3.63rem;
+    }
+  }
+  &__contacts {
+    max-width: 15.6875rem;
+    align-self: flex-end;
+    @extend %flex-column;
+    gap: 1.44rem;
+    color: #fff;
+    @media (min-width: 769px) {
+      &-btn {
+        display: none;
+      }
+    }
+  }
+  &__advantages {
+    flex-grow: 1;
+    max-width: 49.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8.38rem;
+  }
+  &__text {
+    max-width: 33.1875rem;
+    color: #fff;
+  }
+}
+@media (max-width: 768px) {
+  .service-section {
+    padding-bottom: 4.5rem;
+    &__row {
+      gap: 2rem;
+      &:not(:first-child) {
+        margin-top: 3.31rem;
+      }
+    }
+    &__contacts {
+      max-width: 29.89%;
+      line-height: 142.085%;
+    }
+    &__advantages {
+      max-width: 100%;
+      gap: 5.19rem;
+    }
+    &__text {
+      align-self: flex-end;
+      max-width: 25.1875rem;
+      line-height: 142.085%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .service-section {
+    padding-top: 4.38rem;
+    padding-bottom: 4.81rem;
+    &__row {
+      flex-direction: column-reverse;
+      gap: 5.94rem;
+      &:not(:first-child) {
+        margin-top: 2.56rem;
+      }
+    }
+    &__contacts {
+      max-width: 100%;
+      width: 100%;
+      flex-direction: row;
+      align-items: center; 
+      justify-content: space-between;
+      &-text {
+        max-width: 13rem;
+      }
+    }
+    &__advantages {
+      gap: 3.94rem;
+      .border-blocks {
+        width: calc(100% + (0.5rem * 2));
+        transform: translateX(-0.5rem);
+      }
+    }
+    &__text {
+      max-width: 100%;
+    }
+  }
+}
+
+
+
+
+
+// ===================================
+// contacts-section
+// ===================================
+.contacts-section {
+  padding-top: 5.37rem;
+  &__contacts {
+    padding-top: 5.56rem;
+    padding-bottom: 4.69rem;
+  }
+  &__map {
+    height: 21.1875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-section {
+    padding-top: 3.75rem;
+    &__contacts {
+      padding-top: 3.69rem;
+      padding-bottom: 2.94rem;
+    }
+    &__map {
+      height: 16.75rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts-section {
+    &__contacts {
+      padding-bottom: 4.63rem;
+    }
+  }
+}

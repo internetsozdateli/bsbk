@@ -1,0 +1,49 @@
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 3rem;
+  &__item {
+    @extend %flex-column;
+    gap: 1.25rem;
+    max-width: 16rem;
+    color: #EAEAEA;
+    &-title {
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    a.contacts__item-value {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    gap: 2rem;
+    &__item {
+      max-width: 11rem;
+      gap: 0.94rem;
+      &-title {
+        font-size: 1.5rem;
+      }
+      &-value {
+        line-height: 142.085%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.75rem;
+    row-gap: 2.69rem;
+    &__item {
+      max-width: 100%;
+    }
+  }
+}

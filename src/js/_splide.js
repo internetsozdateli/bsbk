@@ -43,6 +43,7 @@ export function splide() {
     const splide = new Splide(cardsSlider, {
       arrows : false,
       pagination : false,
+      focus: 'center',
       perPage    : 3,
       gap: '0.88rem',
       breakpoints: {

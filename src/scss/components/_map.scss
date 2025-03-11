@@ -1,0 +1,10 @@
+.map {
+  div, iframe {
+    width: 100%;
+    height: 100%;
+  }
+  transition: 0.7s all;
+  &:not(:hover) {
+    filter: grayscale(1);
+  }
+}
