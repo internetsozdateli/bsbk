@@ -6,6 +6,7 @@ import { fancyboxInit } from './_fancyboxInit.js';
 import { text } from './_text.js';
 // import { imagesCarousel } from './_images-carousel.js';
 import { splide } from './_splide.js';
+import { expandableList } from './_expandable-list.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
     burgerBtn();
@@ -14,4 +15,5 @@ document.addEventListener( 'DOMContentLoaded', function() {
     text();
     // imagesCarousel();
     splide();
+    expandableList();
 })

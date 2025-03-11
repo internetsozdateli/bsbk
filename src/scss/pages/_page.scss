@@ -207,3 +207,43 @@
     }
   }
 }
+
+
+
+
+
+// ===================================
+// projects-section
+// ===================================
+.projects-section {
+  padding-top: 3.71rem;
+  padding-bottom: 2.44rem;
+  &__expandable-list {
+    &:not(:first-child) {
+      margin-top: 4.71rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding-top: 4.065rem;
+    padding-bottom: 2.095rem;
+    &__expandable-list {
+      &:not(:first-child) {
+        margin-top: 3.62rem;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .projects-section {
+    padding-top: 4.375rem;
+    padding-bottom: 1.815rem;
+    &__expandable-list {
+      &:not(:first-child) {
+        margin-top: 4.06rem;
+      }
+    }
+  }
+}
