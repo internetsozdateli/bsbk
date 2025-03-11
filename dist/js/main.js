@@ -6170,6 +6170,7 @@ function splide() {
     const splide2 = new Splide(cardsSlider, {
       arrows: false,
       pagination: false,
+      focus: "center",
       perPage: 3,
       gap: "0.88rem",
       breakpoints: {
@@ -6232,6 +6233,77 @@ function expandableList() {
     }
   });
 }
+function scrollToAnchor() {
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  anchorLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          // Плавный переход
+          block: "start"
+          // Скроллим к началу элемента
+        });
+      }
+    });
+  });
+}
+function headerNav() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".header__nav-link");
+  window.addEventListener("scroll", () => {
+    let currentSection = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      const lastSection = Array.from(sections).reverse().find((section) => {
+        section.offsetTop;
+        const sectionBottom = section.offsetTop + section.offsetHeight;
+        return sectionBottom <= document.body.offsetHeight;
+      });
+      if (lastSection) {
+        currentSection = lastSection.getAttribute("id");
+      }
+    }
+    navLinks.forEach((link) => {
+      const linkHref = link.getAttribute("href").substring(1);
+      const parentItem = link.parentElement;
+      if (linkHref === currentSection) {
+        parentItem.classList.add("header__nav-item--active");
+      } else {
+        parentItem.classList.remove("header__nav-item--active");
+      }
+    });
+  });
+}
+function upBtn() {
+  const upButton = document.querySelector(".up-btn");
+  if (!upButton) return;
+  window.addEventListener("scroll", () => {
+    const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 500;
+    if (isAtBottom) {
+      upButton.classList.add("up-btn--show");
+    } else {
+      upButton.classList.remove("up-btn--show");
+    }
+  });
+  upButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      // Скроллим к верхнему краю страницы
+      behavior: "smooth"
+      // Плавная прокрутка
+    });
+  });
+}
 document.addEventListener("DOMContentLoaded", function() {
   burgerBtn();
   counter();
@@ -6239,4 +6311,7 @@ document.addEventListener("DOMContentLoaded", function() {
   text();
   splide();
   expandableList();
+  scrollToAnchor();
+  headerNav();
+  upBtn();
 });
