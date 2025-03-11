@@ -165,3 +165,45 @@
     }
   }
 }
+
+
+
+
+
+// ===================================
+// opportunities-section
+// ===================================
+.opportunities-section {
+  padding-top: 5.565rem;
+  padding-bottom: 3.71rem;
+  overflow: hidden;
+  &__chess-content {
+    &:not(:first-child) {
+      margin-top: 4.71rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .opportunities-section {
+    padding-top: 4.385rem;
+    padding-bottom: 4.065rem;
+    &__chess-content {
+      &:not(:first-child) {
+        margin-top: 3.63rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .opportunities-section {
+    padding-top: 4.11rem;
+    padding-bottom: 4.375rem;
+    &__chess-content {
+      &:not(:first-child) {
+        margin-top: 4.06rem;
+      }
+    }
+  }
+}

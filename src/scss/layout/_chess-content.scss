@@ -1,0 +1,92 @@
+.chess-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6.41rem;
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9.88rem;
+    &-title {
+      position: relative;
+      padding-top: 3.72169rem;
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+      color: #000;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6.31313rem;
+        height: 2.54169rem;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='102' height='41' viewBox='0 0 102 41' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M90.8499 20.3335L50.5052 20.3335L50.5052 10.1667C50.5052 4.57614 55.0785 -8.18152e-05 60.6656 -8.23036e-05L101.01 -8.58307e-05L101.01 10.1667C101.01 15.7573 96.4369 20.3335 90.8499 20.3335Z' fill='%23010266'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M40.3447 40.667L-2.28882e-05 40.667L-2.3777e-05 30.5002C-2.42657e-05 24.9096 4.57335 20.3334 10.1604 20.3334L50.5051 20.3334L50.5051 30.5002C50.5051 36.0908 45.9318 40.667 40.3447 40.667Z' fill='%23010266'/%3E%3C/svg%3E") no-repeat center / contain;
+      }
+      &:not(:last-child) {
+        margin-bottom: 2.01rem;
+      }
+    }
+    &-image {
+      flex: 0 0 43.6875rem;
+      @extend %proportional-media;
+      padding-bottom: 28.5rem;
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+      gap: 5.37rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .chess-content {
+    gap: 8.06rem;
+    &__item {
+      gap: 1.63rem;
+      &-title {
+        padding-top: 3rem;
+        font-size: 2rem;
+        &:not(:last-child) {
+          margin-bottom: 0.65rem;
+        }
+      }
+      &-image {
+        flex: 0 0 33rem;
+        padding-bottom: 21.5rem;
+      }
+      @media (min-width: 481px) {
+        &:nth-child(2n-1) {
+          transform: translateX(1.88rem);
+          .chess-content__item-text {
+            max-width: 16rem;
+          }
+        }
+      }
+      &:nth-child(2n) {
+        gap: 4.13rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .chess-content {
+    gap: 5rem;
+    &__item {
+      flex-direction: column-reverse;
+      gap: 2.5rem;
+      &-image {
+        flex: auto;
+        width: 100%;
+        padding-bottom: 67.9%;
+      }
+      &:nth-child(2n) {
+        flex-direction: column-reverse;
+        gap: 2.5rem;
+      }
+    }
+  }
+}

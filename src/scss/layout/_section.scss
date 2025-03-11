@@ -54,6 +54,11 @@
       text-align: center;
     }
   }
+  @media (min-width: 769px) {
+    .container:not(.container--big) &__title {
+      transform: translateX(-4.75rem);
+    }
+  }
 }
 
 @media (max-width: 768px) {
