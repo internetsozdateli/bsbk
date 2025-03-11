@@ -247,3 +247,63 @@
     }
   }
 }
+
+
+
+
+
+// ===================================
+// team-section
+// ===================================
+.team-section {
+  padding-top: 2.44rem;
+  padding-bottom: 4.63rem;
+  overflow: hidden;
+  &__promos {
+    &:not(:first-child) {
+      margin-top: 5.5rem;
+    }
+  }
+  &__cards {
+    &:not(:first-child) {
+      margin-top: 3.5rem;
+    }
+    .splide__track {
+      overflow: visible;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding-top: 2.095rem;
+    padding-bottom: 3.94rem;
+    &__promos {
+      &:not(:first-child) {
+        margin-top: 2.81rem;
+      }
+    }
+    &__cards {
+      &:not(:first-child) {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding-top: 1.815rem;
+    padding-bottom: 3.67rem;
+    &__promos {
+      &:not(:first-child) {
+        margin-top: 3.12rem;
+      }
+    }
+    &__cards {
+      &:not(:first-child) {
+        margin-top: 2.63rem;
+      }
+    }
+  }
+}

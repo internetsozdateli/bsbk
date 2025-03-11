@@ -1,6 +1,9 @@
 .text {
-  @extend %flex-column;
-  gap: 1rem;
+  &:not(:has(&__inner)),
+  &__inner {
+    @extend %flex-column;
+    gap: 1rem;
+  }
   &:has(&__spoiler) &__inner {
     display: -webkit-box;
     -webkit-box-orient: vertical;

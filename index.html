@@ -366,94 +366,94 @@
 
         <section class="team-section section">
           <div class="team-section__container section__container container">
-            <h2 class="team-section__title section__title"></h2>
+            <h2 class="team-section__title section__title">команда</h2>
             <div class="team-section__promos promos">
               <div class="promos__item promos__item--row">
-                .row-content<div class="promos__item-content">
+                <div class="promos__item-content">
                   <div class="promos__item-logo">
-                    <img src="public/images/brands/bsbk-logo.svg" alt="">
+                    <img src="public/images/common/logo.svg" alt="">
                   </div>
-                  <div class="promos__item-text text" data-spoiler-tablet="2" data-spoiler-mobile="0">
-                    <div class="text__inner">
-                      <p>В основе Белорусской Строительной Бассейновой Компании лежит опыт, профессионализм и страсть к своему делу. Наша команда — это сплочённый коллектив высококвалифицированных специалистов, которые готовы воплощать самые смелые идеи и сложные проекты.</p>
-                    </div>
-                    <label class="text__spoiler btn btn--grey">
-                      <span>Показать</span>
-                      <span>Скрыть</span>
-                      <input type="checkbox">
-                    </label>
+                  <div class="promos__item-text text">
+                    <p>В основе Белорусской Строительной Бассейновой Компании лежит опыт, профессионализм и страсть к своему делу. Наша команда — это сплочённый коллектив высококвалифицированных специалистов, которые готовы воплощать самые смелые идеи и сложные проекты.</p>
                   </div>
-                  <a class="promos__item-btn btn btn--fill" href="#" target="_blank">Перейти на сайт</a>
                 </div>
                 <div class="promos__item-image">
-                  <img src="public/images/team/team-1.jpg" alt="">
+                  <picture>
+                    <source srcset="public/images/team/team-1-3.jpg" media="(max-width: 480px)">
+                    <source srcset="public/images/team/team-1-2.jpg" media="(max-width: 768px)">
+                    <img src="public/images/team/team-1.jpg" alt="">
+                  </picture>
                 </div>
               </div>
             </div>
-            <div class="team-section__cards cards scrollable-row">
-              <div class="cards__item scrollable-row__item">
-                <div class="cards__item-image">
-                  <img src="public/images/team/engineers-and-designers.jpg" alt="">
-                </div>
-                <div class="cards__item-content">
-                  <div class="cards__item-title">Инженеры и проектировщики</div>
-                  <div class="cards__item-text text">
-                    <p>Мы разрабатываем бассейны, которые идеально соответствуют вашим желаниям и техническим требованиям. Наша команда проектировщиков:</p>
+            <div class="team-section__cards cards splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <div class="cards__item splide__slide">
+                    <div class="cards__item-image">
+                      <img src="public/images/team/engineers-and-designers.jpg" alt="">
+                    </div>
+                    <div class="cards__item-content">
+                      <div class="cards__item-title">Инженеры и проектировщики</div>
+                      <div class="cards__item-text text">
+                        <p>Мы разрабатываем бассейны, которые идеально соответствуют вашим желаниям и техническим требованиям. Наша команда проектировщиков:</p>
+                      </div>
+                      <ul class="cards__item-list">
+                        <li class="cards__item-list-item">Создаёт уникальные концепции, учитывая все особенности пространства.</li>
+                        <li class="cards__item-list-item">Использует передовые технологии 3D-моделирования для визуализации проекта.</li>
+                        <li class="cards__item-list-item">Обеспечивает точные расчёты, гарантирующие безопасность и долговечность конструкции.</li>
+                      </ul>
+                    </div>
                   </div>
-                  <ul class="cards__item-list">
-                    <li class="cards__item-list-item">Создаёт уникальные концепции, учитывая все особенности пространства.</li>
-                    <li class="cards__item-list-item">Использует передовые технологии 3D-моделирования для визуализации проекта.</li>
-                    <li class="cards__item-list-item">Обеспечивает точные расчёты, гарантирующие безопасность и долговечность конструкции.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="cards__item scrollable-row__item">
-                <div class="cards__item-image">
-                  <img src="public/images/team/construction-masters.jpg" alt="">
-                </div>
-                <div class="cards__item-content">
-                  <div class="cards__item-title">Мастера строительства</div>
-                  <div class="cards__item-text text">
-                    <p>Наша строительная команда — это профессионалы с многолетним опытом, которые знают всё о возведении бассейнов. Мы обеспечиваем:</p>
+                  <div class="cards__item splide__slide">
+                    <div class="cards__item-image">
+                      <img src="public/images/team/construction-masters.jpg" alt="">
+                    </div>
+                    <div class="cards__item-content">
+                      <div class="cards__item-title">Мастера строительства</div>
+                      <div class="cards__item-text text">
+                        <p>Наша строительная команда — это профессионалы с многолетним опытом, которые знают всё о возведении бассейнов. Мы обеспечиваем:</p>
+                      </div>
+                      <ul class="cards__item-list">
+                        <li class="cards__item-list-item">Высокую точность выполнения строительных работ.</li>
+                        <li class="cards__item-list-item">Использование современных материалов и технологий.</li>
+                        <li class="cards__item-list-item">Безупречное качество отделки, от облицовки до установки систем очистки воды.</li>
+                      </ul>
+                    </div>
                   </div>
-                  <ul class="cards__item-list">
-                    <li class="cards__item-list-item">Высокую точность выполнения строительных работ.</li>
-                    <li class="cards__item-list-item">Использование современных материалов и технологий.</li>
-                    <li class="cards__item-list-item">Безупречное качество отделки, от облицовки до установки систем очистки воды.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="cards__item scrollable-row__item">
-                <div class="cards__item-image">
-                  <img src="public/images/team/technicians-and-service-specialists.jpg" alt="">
-                </div>
-                <div class="cards__item-content">
-                  <div class="cards__item-title">Техники и сервисные специалисты</div>
-                  <div class="cards__item-text text">
-                    <p>Для нас важно, чтобы ваш бассейн оставался в идеальном состоянии. Именно поэтому наша сервисная команда предлагает:</p>
+                  <div class="cards__item splide__slide">
+                    <div class="cards__item-image">
+                      <img src="public/images/team/technicians-and-service-specialists.jpg" alt="">
+                    </div>
+                    <div class="cards__item-content">
+                      <div class="cards__item-title">Техники и сервисные специалисты</div>
+                      <div class="cards__item-text text">
+                        <p>Для нас важно, чтобы ваш бассейн оставался в идеальном состоянии. Именно поэтому наша сервисная команда предлагает:</p>
+                      </div>
+                      <ul class="cards__item-list">
+                        <li class="cards__item-list-item">Установку и настройку оборудования (фильтрация, подогрев, освещение).</li>
+                        <li class="cards__item-list-item">Регулярное обслуживание бассейнов, включая очистку и профилактику систем.</li>
+                        <li class="cards__item-list-item">Оперативное устранение любых неисправностей.</li>
+                      </ul>
+                    </div>
                   </div>
-                  <ul class="cards__item-list">
-                    <li class="cards__item-list-item">Установку и настройку оборудования (фильтрация, подогрев, освещение).</li>
-                    <li class="cards__item-list-item">Регулярное обслуживание бассейнов, включая очистку и профилактику систем.</li>
-                    <li class="cards__item-list-item">Оперативное устранение любых неисправностей.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="cards__item scrollable-row__item">
-                <div class="cards__item-image">
-                  <img src="public/images/team/client-managers.jpg" alt="">
-                </div>
-                <div class="cards__item-content">
-                  <div class="cards__item-title">Клиент-менеджеры</div>
-                  <div class="cards__item-text text">
-                    <p>Мы понимаем, как важно уделять внимание каждому клиенту. Наша команда клиент-менеджеров:</p>
+                  <div class="cards__item splide__slide">
+                    <div class="cards__item-image">
+                      <img src="public/images/team/client-managers.jpg" alt="">
+                    </div>
+                    <div class="cards__item-content">
+                      <div class="cards__item-title">Клиент-менеджеры</div>
+                      <div class="cards__item-text text">
+                        <p>Мы понимаем, как важно уделять внимание каждому клиенту. Наша команда клиент-менеджеров:</p>
+                      </div>
+                      <ul class="cards__item-list">
+                        <li class="cards__item-list-item">Профессионально консультирует на всех этапах работы.</li>
+                        <li class="cards__item-list-item">Помогает определиться с выбором материалов, дизайна и оборудования.</li>
+                        <li class="cards__item-list-item">Оперативно решает любые вопросы, связанные с проектом.</li>
+                      </ul>
+                    </div>
                   </div>
-                  <ul class="cards__item-list">
-                    <li class="cards__item-list-item">Профессионально консультирует на всех этапах работы.</li>
-                    <li class="cards__item-list-item">Помогает определиться с выбором материалов, дизайна и оборудования.</li>
-                    <li class="cards__item-list-item">Оперативно решает любые вопросы, связанные с проектом.</li>
-                  </ul>
-                </div>
+                </ul>
               </div>
             </div>
           </div>

@@ -11,9 +11,9 @@ export function splide() {
     }
   };
   
-  const imagesCarousels = document.querySelectorAll('.images-carousel.splide');
-  imagesCarousels.forEach(imagesCarousel => {
-    const splide = new Splide(imagesCarousel, {
+  const imagesCarouselSliders = document.querySelectorAll('.images-carousel.splide');
+  imagesCarouselSliders.forEach(imagesCarouselSlider => {
+    const splide = new Splide(imagesCarouselSlider, {
       arrows : false,
       pagination : false,
       type   : 'loop',
@@ -33,9 +33,34 @@ export function splide() {
       }
     });
 
-    splide.on('mounted', () => destroyIfNotOverflowing(splide, imagesCarousel));
+    splide.on('mounted', () => destroyIfNotOverflowing(splide, imagesCarouselSlider));
 
     splide.mount({AutoScroll});
+  });
+
+  const cardsSliders = document.querySelectorAll('.cards.splide');
+  cardsSliders.forEach(cardsSlider => {
+    const splide = new Splide(cardsSlider, {
+      arrows : false,
+      pagination : false,
+      perPage    : 3,
+      gap: '0.88rem',
+      breakpoints: {
+        768: {
+          perPage : 2.2,
+        },
+        480: {
+          perPage : 1.5,
+        },
+        360: {
+          perPage : 1.2,
+        },
+      }
+    });
+
+    splide.on('mounted', () => destroyIfNotOverflowing(splide, cardsSlider));
+
+    splide.mount();
   });
 
 }
