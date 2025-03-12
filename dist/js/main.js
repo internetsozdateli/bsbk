@@ -44,7 +44,15 @@ function burgerBtn() {
       const targetElement = document.querySelector(targetSelector);
       if (targetElement) {
         const targetClass = btn.dataset.class;
-        targetElement.classList.toggle(targetClass);
+        const classAdded = targetElement.classList.toggle(targetClass);
+        if (classAdded) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            // Плавный переход
+            block: "start"
+            // Скроллим к началу элемента
+          });
+        }
       }
     });
   });
@@ -6283,6 +6291,17 @@ function headerNav() {
       }
     });
   });
+  const header = document.querySelector(".header");
+  if (header) {
+    const headerBurgerBtn = document.querySelector(".header__burger-btn");
+    document.addEventListener("click", (e2) => {
+      if (header.classList.contains("header--burger-active")) {
+        if (!e2.target.closest(".header") || e2.target.closest(".header__nav-link")) {
+          headerBurgerBtn == null ? void 0 : headerBurgerBtn.click();
+        }
+      }
+    });
+  }
 }
 function upBtn() {
   const upButton = document.querySelector(".up-btn");
@@ -6304,6 +6323,408 @@ function upBtn() {
     });
   });
 }
+const Skroll = function(opt) {
+  this.settings = opt || {};
+  this.settings.mobile = this.settings.mobile === void 0 ? false : this.settings.mobile;
+  this.referenceElement = this.settings.reference === void 0 ? window : this.get(this.settings.reference)[0];
+  this.elements = [];
+  this.data = {};
+  this.animations = {
+    zoomIn: {
+      start: function(el) {
+        el.style["transform"] = "scale(.1,.1)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "scale(1,1)";
+        el.style["opacity"] = 1;
+      }
+    },
+    fadeInLeft: {
+      start: function(el) {
+        el.style["transform"] = "translate(-50%,0)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0)";
+        el.style["opacity"] = 1;
+      }
+    },
+    fadeInRight: {
+      start: function(el) {
+        el.style["transform"] = "translate(50%,0)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0)";
+        el.style["opacity"] = 1;
+      }
+    },
+    fadeInLeftBig: {
+      start: function(el) {
+        el.style["transform"] = "translate(-100%,0)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0)";
+        el.style["opacity"] = 1;
+      }
+    },
+    fadeInRightBig: {
+      start: function(el) {
+        el.style["transform"] = "translate(100%,0)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0)";
+        el.style["opacity"] = 1;
+      }
+    },
+    fadeInUp: {
+      start: function(el) {
+        el.style["transform"] = "translate(0,50%)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0,0%)";
+        el.style["opacity"] = 1;
+      }
+    },
+    fadeInDown: {
+      start: function(el) {
+        el.style["transform"] = "translate(0,-50%)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0,0%)";
+        el.style["opacity"] = 1;
+      }
+    },
+    slideInLeft: {
+      start: function(el) {
+        el.style["transform"] = "translate(-50%,0) scale(.8,.8)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0) scale(1,1)";
+        el.style["opacity"] = 1;
+      }
+    },
+    slideInLeftBig: {
+      start: function(el) {
+        el.style["transform"] = "translate(-100%,0) scale(.8,.8)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0) scale(1,1)";
+        el.style["opacity"] = 1;
+      }
+    },
+    slideInRight: {
+      start: function(el) {
+        el.style["transform"] = "translate(50%,0) scale(.8,.8)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0) scale(1,1)";
+        el.style["opacity"] = 1;
+      }
+    },
+    slideInRightBig: {
+      start: function(el) {
+        el.style["transform"] = "translate(-100%,0) scale(.8,.8)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0) scale(1,1)";
+        el.style["opacity"] = 1;
+      }
+    },
+    flipInX: {
+      start: function(el) {
+        el.style["transform"] = "rotateX(90deg)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "rotateX(0deg)";
+        el.style["opacity"] = 1;
+      }
+    },
+    flipInY: {
+      start: function(el) {
+        el.style["transform"] = "rotateY(90deg)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "rotateY(0deg)";
+        el.style["opacity"] = 1;
+      }
+    },
+    rotateRightIn: {
+      start: function(el) {
+        el.style["transform"] = "rotate(45deg)";
+        el.style["transform-origin"] = "0 100%";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "rotate(0deg)";
+        el.style["opacity"] = 1;
+      }
+    },
+    rotateLeftIn: {
+      start: function(el) {
+        el.style["transform"] = "rotate(-45deg)";
+        el.style["transform-origin"] = "0 100%";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "rotate(0deg)";
+        el.style["opacity"] = 1;
+      }
+    },
+    growInLeft: {
+      start: function(el) {
+        el.style["transform"] = "translate(-100%,0) scale(.1,.1)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0) scale(1,1)";
+        el.style["opacity"] = 1;
+      }
+    },
+    growInRight: {
+      start: function(el) {
+        el.style["transform"] = "translate(100%,0) scale(.1,.1)";
+        el.style["opacity"] = 0;
+      },
+      end: function(el) {
+        el.style["transform"] = "translate(0%,0) scale(1,1)";
+        el.style["opacity"] = 1;
+      }
+    }
+  };
+};
+Skroll.prototype.get = function(el) {
+  return document.querySelectorAll(el);
+};
+Skroll.prototype.inViewport = function(elem, settings) {
+  var scrollTop, elementTop, elementBottom, viewportTop, viewportBottom;
+  if (this.referenceElement == window) {
+    scrollTop = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
+    elementTop = this.data[elem.getAttribute("data-skroll-id")].top;
+    elementBottom = elementTop + elem.offsetHeight;
+    viewportTop = scrollTop + screen.availHeight * settings.triggerTop;
+    viewportBottom = scrollTop + screen.availHeight * settings.triggerBottom;
+  } else {
+    var re2 = this.referenceElement;
+    scrollTop = re2.scrollTop;
+    elementTop = this.data[elem.getAttribute("data-skroll-id")].top;
+    elementBottom = elementTop + elem.offsetHeight;
+    viewportTop = scrollTop + re2.offsetHeight * settings.triggerTop;
+    viewportBottom = scrollTop + re2.offsetHeight * settings.triggerBottom;
+  }
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+Skroll.prototype.getScrollStatus = function(elem, settings) {
+  if (this.inViewport(elem, settings)) {
+    this.data[elem.getAttribute("data-skroll-id")].inView = true;
+    return { action: "enter", data: { shown: this.data[elem.getAttribute("data-skroll-id")].shown } };
+  } else {
+    if (this.data[elem.getAttribute("data-skroll-id")].inView) {
+      this.data[elem.getAttribute("data-skroll-id")].inView = false;
+      return { action: "leave", data: { shown: this.data[elem.getAttribute("data-skroll-id")].shown } };
+    }
+    return { action: "idle", data: { shown: this.data[elem.getAttribute("data-skroll-id")].shown } };
+  }
+};
+Skroll.prototype.add = function(el, options = {}) {
+  var settings = {
+    triggerTop: options.triggerTop || 0.2,
+    triggerBottom: options.triggerBottom || 0.8,
+    delay: options.delay || 0,
+    duration: options.duration || 500,
+    animation: options.animation || "zoomIn",
+    easing: options.easing || "ease",
+    wait: options.delay || 0,
+    repeat: options.repeat || false,
+    onEnter: options.onEnter || false,
+    onLeave: options.onLeave || false
+  };
+  this.elements.push({
+    element: el,
+    settings
+  });
+  return this;
+};
+Skroll.prototype.recalcPosition = function() {
+  var _this = this;
+  this.elements.forEach(function(val, key) {
+    _this.get(val.element).forEach(function(e2, i2) {
+      var t2 = e2.style.transform;
+      e2.style["transform"] = "none";
+      setTimeout(function() {
+        var offset = e2.getBoundingClientRect();
+        var top = _this.referenceElement == window ? offset.top + _this.referenceElement.scrollY : offset.top + _this.referenceElement.scrollTop;
+        _this.data[e2.getAttribute("data-skroll-id")].top = top;
+        e2.style["transform"] = t2;
+      }, 50);
+    });
+  });
+};
+Skroll.prototype.throttle = function(fn, threshhold, scope) {
+  threshhold || (threshhold = 250);
+  var last, deferTimer;
+  return function() {
+    var context = scope || this;
+    var now = +/* @__PURE__ */ new Date(), args = arguments;
+    if (last && now < last + threshhold) {
+      clearTimeout(deferTimer);
+      deferTimer = setTimeout(function() {
+        last = now;
+        fn.apply(context, args);
+      }, threshhold);
+    } else {
+      last = now;
+      fn.apply(context, args);
+    }
+  };
+};
+Skroll.prototype.addAnimation = function(name, property) {
+  this.animations[name] = property;
+  return this;
+};
+Skroll.prototype.init = function() {
+  var _this = this;
+  if (!this.settings.mobile && screen.width < 600) return this;
+  var id = 0;
+  this.elements.forEach(function(val, key) {
+    _this.get(val.element).forEach(function(e2, i2) {
+      e2.setAttribute("data-skroll-id", id);
+      var offset = e2.getBoundingClientRect();
+      var top = _this.referenceElement == window ? offset.top + _this.referenceElement.scrollY : offset.top + _this.referenceElement.scrollTop;
+      _this.data[e2.getAttribute("data-skroll-id")] = {};
+      _this.data[e2.getAttribute("data-skroll-id")].inView = false;
+      _this.data[e2.getAttribute("data-skroll-id")].shown = false;
+      _this.data[e2.getAttribute("data-skroll-id")].top = top;
+      _this.data[e2.getAttribute("data-skroll-id")].oef = false;
+      _this.data[e2.getAttribute("data-skroll-id")].olf = false;
+      if (typeof val.settings.animation == "string" && val.settings.animation != "none") {
+        if (!_this.animations[val.settings.animation]) {
+          console.warn("The requested animation '%s' was not found switching to default zoomIn", val.settings.animation);
+          console.trace();
+          val.settings.animation = "zoomIn";
+        }
+        _this.animations[val.settings.animation].start(e2);
+      } else if (typeof val.settings.animation == "object") {
+        if (val.settings.animation.start != void 0) {
+          val.settings.animation.start(e2);
+        }
+      }
+      id++;
+    });
+  });
+  ["scroll", "resize"].forEach(function(event) {
+    _this.referenceElement.addEventListener(event, _this.throttle(function() {
+      _this.elements.forEach(function(val, key) {
+        var tDelay = val.settings.wait;
+        _this.get(val.element).forEach(function(e2, i2) {
+          var sStat = _this.getScrollStatus(e2, val.settings);
+          if (sStat.action == "idle") return;
+          if (sStat.action == "enter" && !sStat.data.shown) {
+            if (typeof val.settings.animation == "string" && val.settings.animation != "none") {
+              e2.style["transition"] = "all " + val.settings.duration + "ms " + val.settings.easing;
+              setTimeout(function() {
+                _this.animations[val.settings.animation].end(e2);
+                _this.data[e2.getAttribute("data-skroll-id")].shown = true;
+                tDelay += val.settings.delay * i2;
+              }, tDelay);
+            } else if (typeof val.settings.animation == "object") {
+              if (val.settings.animation.end != void 0) {
+                e2.style["transition"] = "all " + val.settings.duration + "ms " + val.settings.easing;
+                setTimeout(function() {
+                  val.settings.animation.end(e2);
+                  _this.data[e2.getAttribute("data-skroll-id")].shown = true;
+                  tDelay += val.settings.delay * i2;
+                }, tDelay);
+              }
+            }
+            tDelay += val.settings.delay;
+          } else if (sStat.action == "leave" && sStat.data.shown) {
+            if (val.settings.repeat) {
+              if (typeof val.settings.animation == "string" && val.settings.animation != "none") {
+                if (_this.animations[val.settings.animation]) {
+                  e2.style["transition"] = "all " + val.settings.duration + "ms " + val.settings.easing;
+                  setTimeout(function() {
+                    _this.animations[val.settings.animation].end(e2);
+                    _this.data[e2.getAttribute("data-skroll-id")].shown = false;
+                    tDelay += val.settings.delay * i2;
+                  }, tDelay);
+                }
+              } else if (typeof val.settings.animation == "object") {
+                if (val.settings.animation.end != void 0) {
+                  e2.style["transition"] = "all " + val.settings.duration + "ms " + val.settings.easing;
+                  setTimeout(function() {
+                    val.settings.animation.end(e2);
+                    _this.data[e2.getAttribute("data-skroll-id")].shown = false;
+                    tDelay += val.settings.delay * i2;
+                  }, tDelay);
+                }
+              }
+              tDelay += val.settings.delay;
+            }
+          }
+          if (sStat.action == "enter") {
+            if (!_this.data[e2.getAttribute("data-skroll-id")].oef) {
+              if (val.settings.onEnter) {
+                val.settings.onEnter(i2, e2);
+                _this.data[e2.getAttribute("data-skroll-id")].oef = true;
+              }
+            }
+          } else if (sStat.action == "leave") {
+            if (!_this.data[e2.getAttribute("data-skroll-id")].olf) {
+              if (val.settings.onLeave) {
+                val.settings.onLeave(i2, e2);
+                _this.data[e2.getAttribute("data-skroll-id")].olf = true;
+              }
+            }
+          }
+        });
+      });
+      if (event == "resize") _this.recalcPosition();
+    }, 150));
+  });
+  if (window.dispatchEvent) {
+    _this.referenceElement.dispatchEvent(new Event("scroll"));
+  } else {
+    _this.referenceElement.fireEvent("scroll");
+  }
+  return _this;
+};
+function scrollingAnimation() {
+  new Skroll().add(".hero-section__title", {
+    animation: "fadeInUp",
+    delay: 120,
+    duration: 800,
+    wait: 250
+  }).add(".brands-section__promos .promos__item", {
+    animation: "slideInLeft",
+    delay: 80,
+    duration: 800
+  }).add(".chess-content__item-title", {
+    animation: "slideInLeft",
+    delay: 80,
+    duration: 800
+  }).add(".section__title", {
+    animation: "fadeInDown",
+    delay: 120,
+    duration: 600,
+    wait: 250
+  }).add(".border-blocks__item", {
+    animation: "slideInLeft",
+    delay: 80,
+    duration: 800
+  }).init();
+}
 document.addEventListener("DOMContentLoaded", function() {
   burgerBtn();
   counter();
@@ -6314,4 +6735,5 @@ document.addEventListener("DOMContentLoaded", function() {
   scrollToAnchor();
   headerNav();
   upBtn();
+  scrollingAnimation();
 });

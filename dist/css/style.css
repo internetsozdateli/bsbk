@@ -14,7 +14,7 @@
   position: absolute;
   top: 0;
   left: 0;
-}.service-section__contacts, .contacts__item, .cards__item-list, .promos__item-content, .promos__item, .media-content__content, .text:not(:has(.text__inner)), .text__inner {
+}.service-section__contacts, .contacts__item, .cards__item-list, .promos__item-content, .promos__item, .media-content__content, .text__inner, .text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -485,6 +485,8 @@ th {
   .container {
     width: 90.83%;
   }
+}body:has(.header--burger-active) {
+  overflow: hidden;
 }.header {
   position: fixed;
   top: 0;
@@ -667,7 +669,9 @@ th {
     width: calc(100% - 24rem);
     margin-left: auto;
   }
-}.text:not(:has(.text__inner)), .text__inner {
+}.text {
+  gap: 1rem;
+}.text__inner {
   gap: 1rem;
 }.text:has(.text__spoiler) .text__inner {
   display: -webkit-box;
@@ -685,7 +689,7 @@ th {
 }.text__spoiler:has(input[type=checkbox]:checked) span:nth-child(1) {
   display: none;
 }.text:has(.text__spoiler input[type=checkbox]:checked) .text__inner {
-  display: block !important;
+  display: flex !important;
   -webkit-box-orient: initial;
   overflow: visible;
 }@media (max-width: 768px) and (min-width: 481px) {
