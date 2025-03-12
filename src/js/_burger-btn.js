@@ -13,7 +13,15 @@ export function burgerBtn() {
         // Получаем класс из data-class
         const targetClass = btn.dataset.class;
         // Добавляем/убираем класс у целевого элемента
-        targetElement.classList.toggle(targetClass);
+        const classAdded = targetElement.classList.toggle(targetClass);
+
+        // Если класс добавился, скроллим к целевому элементу
+        if (classAdded) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth', // Плавный переход
+            block: 'start', // Скроллим к началу элемента
+          });
+        }
       }
     });
   });

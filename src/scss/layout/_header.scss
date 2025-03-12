@@ -1,3 +1,7 @@
+body:has(.header--burger-active) {
+  overflow: hidden;
+}
+
 .header {
   position: fixed;
   top: 0;

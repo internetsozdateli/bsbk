@@ -42,4 +42,16 @@ export function headerNav() {
       }
     });
   });
+
+  const header = document.querySelector('.header');
+  if (header) {
+    const headerBurgerBtn = document.querySelector('.header__burger-btn');
+    document.addEventListener('click', (e) => {
+      if (header.classList.contains('header--burger-active')) {
+        if (!e.target.closest('.header') || e.target.closest('.header__nav-link')) {
+          headerBurgerBtn?.click();
+        }
+      }
+    })
+  }
 }

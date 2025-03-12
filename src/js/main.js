@@ -10,6 +10,7 @@ import { expandableList } from './_expandable-list.js';
 import { scrollToAnchor } from './_scrollToAnchor.js';
 import { headerNav } from './_headerNav.js';
 import { upBtn } from './_up-btn.js';
+import { scrollingAnimation } from './_scrollingAnimation.js';
 
 document.addEventListener( 'DOMContentLoaded', function() {
     burgerBtn();
@@ -22,4 +23,5 @@ document.addEventListener( 'DOMContentLoaded', function() {
     scrollToAnchor();
     headerNav();
     upBtn();
+    scrollingAnimation();
 })
