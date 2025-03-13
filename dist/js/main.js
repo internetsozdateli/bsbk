@@ -6714,11 +6714,6 @@ function scrollingAnimation() {
     animation: "slideInLeft",
     delay: 80,
     duration: 800
-  }).add(".section__title", {
-    animation: "fadeInDown",
-    delay: 120,
-    duration: 600,
-    wait: 250
   }).add(".border-blocks__item", {
     animation: "slideInLeft",
     delay: 80,
